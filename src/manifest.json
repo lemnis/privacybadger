@@ -1,6 +1,6 @@
 {
   "version": "2017.7.24",
-  "author": { "email": "eff.software.projects@gmail.com" },
+  "author": "eff.software.projects@gmail.com",
   "applications": {
     "gecko": {
       "id": "jid1-MnnxcxisBPnSXQ@jetpack"
@@ -20,7 +20,11 @@
     "privacy"
   ],
   "background": {
+    "persistent": true,
     "scripts": [
+      "js/backgroundScriptsAPIBridge.js",
+      "node_modules/text-encoding/lib/encoding-indexes.js",
+      "node_modules/text-encoding/lib/encoding.js",
       "js/bootstrap.js",
       "lib/punycode.js",
       "lib/publicSuffixList.js",
@@ -54,6 +58,7 @@
     },
     {
       "js": [
+        "js/backgroundScriptsAPIBridge.js",
         "js/contentscripts/clobbercookie.js",
         "js/contentscripts/clobberlocalstorage.js",
         "js/contentscripts/fingerprinting.js",

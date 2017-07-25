@@ -138,7 +138,13 @@ Badger.prototype = {
 
   showFirstRunPage: function(){
     var settings = this.storage.getBadgerStorageObject("settings_map");
-    if (settings.getItem("isFirstRun") && !chrome.extension.inIncognitoContext) {
+    if (settings.getItem("isFirstRun") &&
+      (
+        (typeof chrome.extension.inIncognitoContext !== "undefined" && !chrome.extension.inIncognitoContext)
+        ||
+        (typeof chrome.extension.inPrivateContext !== "undefined" && !chrome.extension.inPrivateContext)
+      )
+    ) {
       chrome.tabs.create({
         url: chrome.extension.getURL("/skin/firstRun.html")
       });

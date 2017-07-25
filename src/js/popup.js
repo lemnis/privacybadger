@@ -25,7 +25,13 @@ var badger = backgroundPage.badger;
 var htmlUtils = require("htmlutils").htmlUtils;
 
 var i18n = chrome.i18n;
-var reloadTab = chrome.tabs.reload;
+var reloadTab = function(tabId){
+  if(chrome.tabs.reload){
+    chrome.tabs.reload(tabId);
+  } else {
+    browser.tabs.executeScript(tabId, { code: 'window.location.reload();' });
+  }
+};
 
 /* if they aint seen the comic*/
 function showNagMaybe() {

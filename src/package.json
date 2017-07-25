@@ -1,0 +1,9 @@
+{
+  "name": "privacy-badger",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "devDependencies": {
+    "text-encoding": "^0.6.4"
+  }
+}
