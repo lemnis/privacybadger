@@ -551,7 +551,6 @@ function displayTooltip(event){
     }
     $container.text($elm.attr('tooltip'));
     $container.show();
-    $container.siblings('.tooltipArrow').show();
   },tooltipDelay);
   $elm.on('mouseleave', function(){clearTimeout(displayTipTimer);});
 }
@@ -566,7 +565,6 @@ function hideTooltip(event){
     if($container.is(':hidden')){return;}
     $container.text('');
     $container.hide();
-    $container.siblings('.tooltipArrow').hide();
   },tooltipDelay);
   $elm.on('mouseenter',function(){clearTimeout(hideTipTimer);});
 }

@@ -25,10 +25,6 @@ button
   min-width: 750px;
 }
 
-.tooltipArrow {
-  bottom: 27px;
-}
-
 #pbInstructions {
     margin: 5px 0 15px;
     width: 450px;

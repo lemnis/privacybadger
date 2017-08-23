@@ -422,8 +422,7 @@ function displayTooltip(event){
       $container = $elm.siblings('.tooltipContainer');
     }
     $container.text($elm.attr('tooltip'));
-    $container.show();
-    $container.siblings('.tooltipArrow').show();
+    $container.css('visibility', 'visible');
   },tooltipDelay);
   $elm.on('mouseleave', function(){clearTimeout(displayTipTimer);});
 }
@@ -442,8 +441,7 @@ function hideTooltip(event){
     }
     if($container.is(':hidden')){return;}
     $container.text('');
-    $container.hide();
-    $container.siblings('.tooltipArrow').hide();
+    $container.css('visibility', 'hidden');
   },tooltipDelay);
   $elm.on('mouseenter',function(){clearTimeout(hideTipTimer);});
 }
