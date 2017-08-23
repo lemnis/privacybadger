@@ -76,9 +76,9 @@ a:hover { color: #ec9329 }
 }
 .clicker.greyed { background: #aaa; }
 .origin{
-  width: 60%;
+  /*width: 60%;*/
   color: #555555;
-  float: left;
+  /*float: left;*/
   display: inline;
 }
 
@@ -96,7 +96,7 @@ a:hover { color: #ec9329 }
 .switch-container{
   width: 115px;
   display: block;
-  margin-left: 220px;
+  /*margin-left: 220px;*/
 }
 .options .switch-container{
   max-width: 114px;
@@ -210,14 +210,16 @@ font-size: 16px;
   background-color: #EC9329;
   color: #333;
 }
-
+thead th{
+    width: 1px;
+}
 .key {
-    position: relative;
-    padding: 4px 0 5px 215px;
+    /*position: relative;*/
+    padding: 4px 0 5px 0;
 }
 
 .key img {
-    margin-left: 19px;
+    margin: 0 9px;
 }
 
 .key .tooltipContainer {

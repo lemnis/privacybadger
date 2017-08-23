@@ -41,9 +41,42 @@ body {
 }
 
 .body-content {
-    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+
+div#blockedResourcesContainer > div {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+}
+
+.keyContainer {
+    display: contents;
+}
+
+.key {}
+
+div#blockedResources {
+    display: contents;
+}
+
+.body-content-inner-wrapper {
+    display: contents;
+}
+
+#associatedTab, #blockedResourcesInner, .clicker {
+    display: contents;
+}
+
+.origin {
+  grid-column-start: 1;
+}
+.switch-container, .key {
+  grid-column-start: 2;
+}
+.tooltipContainer{
+    grid-column: 1 / 3;
 }
