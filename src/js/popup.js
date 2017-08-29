@@ -380,6 +380,9 @@ function refreshPopup(tabId) {
 
     if (printable.length) {
       requestAnimationFrame(renderDomains);
+    } else {
+      document.body.style.height = window.innerHeight + "px";
+      document.querySelector(".body-content").style.position = "absolute";
     }
   }
   requestAnimationFrame(renderDomains);
@@ -530,6 +533,7 @@ document.addEventListener('DOMContentLoaded', function () {
   getTab(function(t) {
     refreshPopup(t.id);
   });
+
 });
 
 window.addEventListener('unload', function() {
